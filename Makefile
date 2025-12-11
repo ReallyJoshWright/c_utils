@@ -1,9 +1,10 @@
 TARGET = app
 CC = gcc -std=c23 -ggdb -Wall -Wextra -pedantic -O0
-INC =
+INC = -I./include
 LIBS =
-HEADERS =
-SOURCES = main.c
+HEADERS = include/utils.h
+SOURCES = src/utils.c \
+		  main.c
 
 all: $(TARGET)
 
