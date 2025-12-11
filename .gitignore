@@ -1,0 +1,6 @@
+app
+compile_commands.json
+.cache/
+
+*.o
+*.d
