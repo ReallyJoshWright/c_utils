@@ -46,12 +46,8 @@ Result unexpected(char* error) {
     return result;
 }
 
-bool hasValue(Result result) {
-    return result.hasValue;
-}
-
-char* error(Result result) {
-    return result.value.str;
+char* result_error(Result* result) {
+    return result->value.str;
 }
 
 Result divide(int a, int b) {
@@ -63,7 +59,7 @@ Result divide(int a, int b) {
 
 int main(void) {
     Result res = divide(20, 4);
-    if (!hasValue(res)) {
+    if (!res.hasValue) {
         printf("%s\n", res.value.str);
         return 1;
     }
